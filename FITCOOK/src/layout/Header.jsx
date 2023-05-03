@@ -48,7 +48,7 @@ export default function Header() {
                     <Link to="/rutinas">Rutinas</Link>
                     <Link to="/recetas">Recetas</Link>
                     <Link to="/asesorias">Asesorias</Link>
-                    <Link to="/sobre_nosotros">Sobre Nosotros</Link>
+                    <Link to="/nosotros">Sobre Nosotros</Link>
                     <Link to="/tienda">Tienda</Link>
                     <Link to="/perfil">Perfil</Link>
                     <Link to="/carrito">Carrito</Link>
