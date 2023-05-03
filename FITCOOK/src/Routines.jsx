@@ -9,6 +9,7 @@ function Routines() {
       .then(data => setRoutines(data.routines))
       .catch(error => console.log(error));
   }, []);
+  
 
   return (
     <div>
