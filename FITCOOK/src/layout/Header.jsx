@@ -38,7 +38,7 @@ export default function Header() {
       <nav className="navegador">
         <div className='header'>
             <div className='left'>
-                <p>Logo</p>
+            <Link to="/"><p>Logo</p></Link>
             </div>
             <div className="center">
             {/* <Link to="/about">About </Link> */}
