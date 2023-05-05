@@ -5,6 +5,7 @@ import Header from './layout/Header';
 import Footer from "./layout/Footer";
 import NotFound from "./NotFound";
 import AboutUs from "./recetas/Aboutus"
+import Home from "./recetas/Home"
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Routes, Route } from "react-router-dom";
 import './App.css'
@@ -15,7 +16,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='*' element={<NotFound />} />
-        <Route path="/" element={<></>} />
+        <Route path="/" element={<Home />} />
         <Route path="/rutinas" element={<></>} />
         <Route path="/recetas" element={<></>} />
         <Route path="/asesorias" element={<></>} />

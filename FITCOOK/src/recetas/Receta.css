@@ -1,0 +1,43 @@
+/* CSS Aboutus */
+
+.aboutus{
+    margin-top: 3%;
+}
+
+.nosotros{
+    display: flex;
+    flex-wrap: nowrap;      
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    background-color: rgb(237, 237, 237);
+    padding: 50px 0px 40px;
+}
+
+.titulo{
+    flex: 1 0 40%;
+    line-height: 1.8;
+    margin: 0px 10% 0px 20px;
+    color: rgb(235, 104, 61);
+    font-weight: bolder;
+}
+
+.texto{
+    flex: 1 0 40%;
+    line-height: 1.8;
+    margin: 0px 5px 20px 30px;
+    color: rgb(74, 74, 74);
+    font-size: 20px;
+}
+
+/* ------------ */
+/* CSS Home */
+
+.home{
+    width: 100%;
+    height: 500px;
+}
+
+.imagen{
+    height: 100%;
+    width: 100%;
+}
