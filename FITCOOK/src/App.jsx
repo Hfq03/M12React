@@ -4,8 +4,9 @@ import viteLogo from '/vite.svg'
 import Header from './layout/Header';
 import Footer from "./layout/Footer";
 import NotFound from "./NotFound";
-import AboutUs from "./recetas/Aboutus"
-import Home from "./recetas/Home"
+import AboutUs from "./fitcook/Aboutus"
+import Home from "./fitcook/Home"
+import Store from "./Tienda/Tienda"
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Routes, Route } from "react-router-dom";
 import './App.css'
@@ -21,7 +22,7 @@ function App() {
         <Route path="/recetas" element={<></>} />
         <Route path="/asesorias" element={<></>} />
         <Route path="/nosotros" element={<AboutUs/>} />
-        <Route path="/tienda" element={<></>} />
+        <Route path="/tienda" element={<Store/>} />
         <Route path="/perfil" element={<></>} />
         <Route path="/carrito" element={<></>} />
         {/* <Route path="/about" element={<About />} /> */}

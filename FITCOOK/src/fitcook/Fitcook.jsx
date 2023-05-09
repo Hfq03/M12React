@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react';
 import { UserContext } from '../userContext';
 
-export const Receta = ({v, setRefresca} ) => {
+export const Fitcook = ({v, setRefresca} ) => {
 
   let { usuari, setUsuari,authToken,setAuthToken } = useContext(UserContext)
 

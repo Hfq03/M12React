@@ -29,7 +29,7 @@
     z-index: 100;
 }
 
-.header {
+.navegador .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,37 +38,37 @@
     padding: 0 20px;
 }
 
-.left {
+.navegador .left {
     display: flex;
     align-items: center;
 }
 
-.left p {
+.navegador .left p {
     font-size: 24px;
     font-weight: bold;
     color: #000;
     margin: 0;
 }
 
-.center {
+.navegador .center {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
 }
 
-.links {
+.navegador .links {
     display: flex;
     align-items: center;
 }
 
-.right {
+.navegador .right {
     display: flex;
     align-items: center;
     margin-right: 20px;
 }
 
-.right a {
+.navegador .right a {
     color: #000;
     font-size: 16px;
     font-weight: bold;
@@ -77,21 +77,21 @@
     transition: all 0.2s ease-in-out;
 }
 
-.right a:hover {
+.navegador .right a:hover {
     color: #FFB800;
 }
 
-.search-container {
+.navegador .search-container {
     display: flex;
     align-items: center;
 }
 
-form {
+.navegador form {
     display: flex;
     align-items: center;
 }
 
-input[type="text"] {
+.navegador input[type="text"] {
     padding: 8px;
     border-radius: 4px;
     border: none;
@@ -99,18 +99,18 @@ input[type="text"] {
     font-size: 14px;
 }
 
-.btnSearch {
+.navegador .btnSearch {
     background-color: #fff;
     border: none;
     cursor: pointer;
 }
 
-.btnSearch i {
+.navegador .btnSearch i {
     font-size: 24px;
     color: #000;
 }
 
-.nom {
+.navegador .nom {
     margin-left: 20px;
     font-size: 16px;
     font-weight: bold;

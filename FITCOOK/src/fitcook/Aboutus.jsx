@@ -1,5 +1,5 @@
 import React from 'react';
-import './Receta.css'
+import './Fitcook.css'
 
 function AboutUs() {
   return (

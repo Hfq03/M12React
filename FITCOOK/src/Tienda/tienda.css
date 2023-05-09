@@ -1,0 +1,82 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos de la tienda */
+  .Store {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .Store h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .Store > div {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+  }
+  
+  .Store > div h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .Store > div ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .Store > div ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .Store > div ul li button {
+    font-size: 1em;
+    padding: 5px 10px;
+    background-color: #0077c0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Store > div ul li button:hover {
+    background-color: #0061a1;
+  }
+  
+  .Store > div ul li p {
+    margin: 0;
+  }
+  
+  .Store > div ul li:last-child {
+    margin-top: 20px;
+  }
+  
+  .Store > div ul li:last-child p {
+    font-weight: bold;
+  }
+  
+  .Store > div ul li:last-child button {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+  }
+  
+  .Store > div ul li:last-child button:hover {
+    background-color: #ff2d2d;
+  }
