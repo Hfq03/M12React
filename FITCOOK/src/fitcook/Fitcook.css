@@ -1,7 +1,7 @@
 /* CSS Aboutus */
 
 .aboutus{
-    margin-top: 4%;
+    margin-top: -1%;
 }
 
 .aboutus .nosotros{
@@ -53,4 +53,29 @@
 .home .imagen{
     height: 100%;
     width: 100%;
+}
+
+/* ------------ */
+/* CSS Recetas */
+
+.recetas{
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.recetas .recetascont{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+.recetas .recetascont:hover{
+    box-shadow: 0px 2px 4px rgba(62, 210, 255, 0.842);
+    border-radius: 20px;
+    transform: translateY(4px);
 }

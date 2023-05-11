@@ -5,6 +5,7 @@ import Header from './layout/Header';
 import Footer from "./layout/Footer";
 import NotFound from "./NotFound";
 import AboutUs from "./fitcook/Aboutus"
+import Recetas from "./fitcook/Recetas"
 import Home from "./fitcook/Home"
 import Store from "./Tienda/Tienda"
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -19,7 +20,7 @@ function App() {
         <Route path='*' element={<NotFound />} />
         <Route path="/" element={<Home />} />
         <Route path="/rutinas" element={<></>} />
-        <Route path="/recetas" element={<></>} />
+        <Route path="/recetas" element={<Recetas/>} />
         <Route path="/asesorias" element={<></>} />
         <Route path="/nosotros" element={<AboutUs/>} />
         <Route path="/tienda" element={<Store/>} />
