@@ -79,3 +79,29 @@
     border-radius: 20px;
     transform: translateY(4px);
 }
+
+/* CSS Rutina */
+
+.rutina{
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.rutina .carta-rutina{
+    border-radius: 8px;
+    padding: 16px;
+    min-height: 150px;
+    width: 100%;
+    transition: all 0.4s ease 0s;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    background: -webkit-linear-gradient(45deg, rgb(251, 79, 27), rgb(247, 180, 52));
+}
+
+.rutina .carta-rutina:hover{
+    background: -webkit-linear-gradient(60deg, rgb(231, 73, 25), rgb(226, 164, 48));
+}
