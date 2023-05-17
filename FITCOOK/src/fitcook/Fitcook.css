@@ -64,6 +64,13 @@
     grid-template-columns: auto auto;
 }
 
+.recetas .circulo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: red; /* Puedes cambiar el color de fondo según tus necesidades */
+}
+
 .recetas .recetascont{
     display: flex;
     justify-content: space-between;
@@ -86,6 +93,13 @@
     margin-top: 3%;
     display: grid;
     grid-template-columns: auto auto;
+}
+
+.circulo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: red; /* Puedes cambiar el color de fondo según tus necesidades */
 }
 
 .rutina .carta-rutina-medio{
