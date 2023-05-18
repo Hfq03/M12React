@@ -11,8 +11,10 @@ const Rutina = ({v}) => {
     dificultad = 'carta-rutina-facil';
   } else if (v.level === '2') {
     dificultad = 'carta-rutina-medio';
-  } else {
+  } else if (v.level === '3'){
     dificultad = 'carta-rutina-dificil';
+  } else {
+    dificultad = '';
   }
   
 

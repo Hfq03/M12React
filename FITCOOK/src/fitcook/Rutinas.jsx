@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import Rutina from './Rutina';
 import { Link } from 'react-router-dom';
 import './Fitcook.css'
+import { HiPlus } from 'react-icons/hi';
+
 
 const Rutinas = () => {
 
@@ -33,20 +35,16 @@ const Rutinas = () => {
   }, [refresca])   // condició d'execució del useffect
   
   return (
-   <>  
- 
-<div className="py-16 bg-gradient-to-br from-green-50 to-cyan-100">  
-  <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-    <div className="grid gap-12 lg:grid-cols-2">
+   <>
+    <div className="rutinas">
       { rutinas.map( (v,i)=> { return (
         <>
         {  <Rutina  setRefresca={ setRefresca } key={v.id} v={v}/>  }   
         </>
       )})}
     </div>
-  </div>
-  <Link to="/rutinas/add"><div className="circulo"></div></Link>
-</div>
+    <Link to="/rutinas/add"><div className="circulo suma"><HiPlus/></div></Link>
+    <Link to="/ejercicio/add"><div className="circulo-ejercicio suma"><HiPlus/></div></Link>
 </>
   )
 }
