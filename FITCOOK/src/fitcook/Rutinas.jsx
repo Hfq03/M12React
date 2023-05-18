@@ -45,7 +45,7 @@ const Rutinas = () => {
       )})}
     </div>
   </div>
-  <Link to="/rutinas/add"><div class="circulo"></div></Link>
+  <Link to="/rutinas/add"><div className="circulo"></div></Link>
 </div>
 </>
   )
