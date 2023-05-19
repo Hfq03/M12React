@@ -60,8 +60,8 @@ const RutinasAdd = ({ setAfegir }) => {
             //Authorization: 'Bearer '
         },
         method: "POST",
-        body: JSON.stringify({ title,description,level,duration,muscle_groups })  
-        //body: formData
+        //body: JSON.stringify({ title,description,level,duration,muscle_groups })  
+        body: formData
 
       }
     

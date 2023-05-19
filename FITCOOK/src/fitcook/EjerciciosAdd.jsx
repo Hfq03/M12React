@@ -61,15 +61,15 @@ const EjerciciosAdd = ({ setAfegir }) => {
             //Authorization: 'Bearer '
         },
         method: "POST",
-        body: JSON.stringify({ user_id,title,description,level,muscle_groups,video_url,miniature })  
-        //body: formData
+        //body: JSON.stringify({ user_id,title,description,level,muscle_groups,video_url,miniature })  
+        body: formData
 
       }
     
     ).then( data => data.json() )
     .then (resposta => { 
             console.log(resposta); 
-            if (resposta.success == true )
+            if (resposta.exercise)
             {
               //setAfegir(false); // Tornem al llistat
               setAvis("Ejercicio añadido correctamente")
@@ -119,7 +119,7 @@ const EjerciciosAdd = ({ setAfegir }) => {
     <label className="text-gray-600">Descripció</label>
     <textarea 
       name="description"
-      value={formulari.description}
+      value={formulari.description} 
       className="
         w-full
         h-32
