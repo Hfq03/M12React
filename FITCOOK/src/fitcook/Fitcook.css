@@ -56,6 +56,56 @@
 }
 
 /* ------------ */
+
+/* CSS Asesorias */
+
+.asesorias{
+    margin-top: -1%;
+}
+
+.asesorias .abanner{
+    background-image: url(https://corbachofit.com/wp-content/uploads/2023/02/corbacho-principal-1.png);
+    background-position: 50%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.asesorias .texto{
+    margin: 0;
+    padding: 0 15px 30px;
+    width: 100%;
+    color: yellow;
+}
+
+.asesorias .acontainers{
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.asesorias .aimagen{
+    background-color: red;
+    margin: 1%;
+}
+.asesorias .edesc{
+    background-color: red;
+    margin: 1%;
+}
+.asesorias .ndesc{
+    background-color: red;
+    margin: 1%;
+}
+.asesorias .endesc{
+    background-color: red;
+    margin: 1%;
+}
+
+.asesorias .imagen{
+    height: 100%;
+    width: 100%;
+}
+
 /* CSS Recetas */
 
 .recetas{

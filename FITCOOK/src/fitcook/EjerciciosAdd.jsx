@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import "../App.css"
 
-const RutinasAdd = ({ setAfegir }) => {
+const EjerciciosAdd = ({ setAfegir }) => {
 
   let [ formulari,setFormulari] = useState({});
   const [ avis, setAvis] = useState("");
@@ -13,7 +13,6 @@ const RutinasAdd = ({ setAfegir }) => {
 
       e.preventDefault();
 
-      // Esborrem qualsevol possible avís o error
       setError("");
       setAvis("");
 
@@ -41,26 +40,28 @@ const RutinasAdd = ({ setAfegir }) => {
 
     e.preventDefault();
 
-    let {title,description,level,duration,muscle_groups}=formulari;
+    let { user_id,title,description,level,muscle_groups,video_url,miniature}=formulari;
     const formData = new FormData();
+    formData.append("user_id", user_id);
     formData.append("title", title);
     formData.append("description", description);
     formData.append("level", level);
-    formData.append("duration", duration);
     formData.append("muscle_groups", muscle_groups);
+    formData.append("video_url", video_url);
+    formData.append("miniature", miniature);
 
-    console.log("Afegint una rutina....")
+    console.log("Agregando ejercicio....")
     console.log(formulari)
-    console.log(JSON.stringify({ title,description,level,duration,muscle_groups }))
+    console.log(JSON.stringify({ user_id,title,description,level,muscle_groups,video_url,miniature }))
     // Enviam dades a l'aPI i recollim resultat
-    fetch ("http://127.0.0.1:8000/api/routines",{
+    fetch ("http://127.0.0.1:8000/api/exercises",{
         headers: {
             Accept: 'application/json',
             //'Content-type': 'multipart/form-data',
             //Authorization: 'Bearer '
         },
         method: "POST",
-        body: JSON.stringify({ title,description,level,duration,muscle_groups })  
+        body: JSON.stringify({ user_id,title,description,level,muscle_groups,video_url,miniature })  
         //body: formData
 
       }
@@ -71,7 +72,7 @@ const RutinasAdd = ({ setAfegir }) => {
             if (resposta.success == true )
             {
               //setAfegir(false); // Tornem al llistat
-              setAvis("Rutina introduit correctament")
+              setAvis("Ejercicio añadido correctamente")
             }
             else
             {
@@ -93,6 +94,16 @@ const RutinasAdd = ({ setAfegir }) => {
   return (
     <>
      <div className="py-9 pl-9">
+     <div className="py-9 flex flex-col gap-y-2">
+          <label className="text-gray-600" htmlFor="user_id">user_id</label>
+          <input
+              type="text"
+              value={formulari.user_id}
+              name="user_id"
+              className="w-1/3 px-4 py-2 border border-gray-300 outline-none focus:border-gray-400"
+              onChange={ handleChange}
+          />
+      </div>
       <div className="py-9 flex flex-col gap-y-2">
           <label className="text-gray-600" htmlFor="Title">Titutlo</label>
           <input
@@ -153,19 +164,19 @@ const RutinasAdd = ({ setAfegir }) => {
     <option value="2">Medio</option>
     <option value="3">Dificil</option>
   </select>
-  <span className="flex flex-col gap-y-2">
-          <label className="text-gray-600" htmlFor="Name">Duracion</label>
+  <div className="py-9 flex flex-col gap-y-2">
+          <label className="text-gray-600" htmlFor="duration">Duracion</label>
           <input
-            type="text"
-            name="duration"
-            value={formulari.duration}
-            onChange={ handleChange}
-            className="w-1/3 px-4 py-2 border border-gray-300 outline-none focus:border-gray-400"
+              type="text"
+              value={formulari.duration}
+              name="duration"
+              className="w-1/3 px-4 py-2 border border-gray-300 outline-none focus:border-gray-400"
+              onChange={ handleChange}
           />
-  </span>
+      </div>
 
   <span className="flex flex-col gap-y-2">
-          <label className="text-gray-600" htmlFor="Name">Grupo Muscular</label>
+          <label className="text-gray-600" htmlFor="muscle_groups">Grupo Muscular</label>
           <input
             type="text"
             name="muscle_groups"
@@ -174,6 +185,40 @@ const RutinasAdd = ({ setAfegir }) => {
             className="w-1/3 px-4 py-2 border border-gray-300 outline-none focus:border-gray-400"
           />
   </span>
+  <span className="flex flex-col gap-y-2">
+          <label className="text-gray-600" htmlFor="video_url">Video</label>
+          <input
+            type="text"
+            name="video_url"
+            value={formulari.video_url}
+            onChange={ handleChange}
+            className="w-1/3 px-4 py-2 border border-gray-300 outline-none focus:border-gray-400"
+          />
+  </span>
+
+  <div className="flex justify-center">
+  <div className="mb-3 w-96">
+    <label htmlFor="miniature" className="form-label inline-block mb-2 text-gray-600">Imatge PNG, JPG or GIF (MAX. 800x400px)</label>
+    <input name="miniature" 
+    onChange={ handleChange}
+    className="form-control
+    block
+    w-full
+    px-3
+    py-1.5
+    text-base
+    font-normal
+    text-gray-700
+    bg-white bg-clip-padding
+    border border-solid border-gray-300
+    rounded
+    transition
+    ease-in-out
+    m-0
+    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file" id="miniature"/>
+  </div>
+</div>
+
 
   <div className="py-9">
     <button onClick={afegir}  type="submit" className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -188,4 +233,4 @@ const RutinasAdd = ({ setAfegir }) => {
   )
 }
 
-export default RutinasAdd
+export default EjerciciosAdd

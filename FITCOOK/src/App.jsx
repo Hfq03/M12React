@@ -5,9 +5,11 @@ import Header from './layout/Header';
 import Footer from "./layout/Footer";
 import NotFound from "./NotFound";
 import AboutUs from "./fitcook/Aboutus"
+import Asesorias from "./fitcook/Asesorias"
 import Recetas from "./fitcook/Recetas"
 import Rutinas from "./fitcook/Rutinas"
 import RutinasAdd from "./fitcook/RutinasAdd"
+import EjerciciosAdd from "./fitcook/EjerciciosAdd" 
 import Home from "./fitcook/Home"
 import Store from "./Tienda/Tienda"
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -23,8 +25,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/rutinas" element={<Rutinas />} />
         <Route path="/rutinas/add" element={<RutinasAdd /> } />
+        <Route path="/ejercicio/add" element={<EjerciciosAdd /> } />
         <Route path="/recetas" element={<Recetas/>} />
-        <Route path="/asesorias" element={<></>} />
+        <Route path="/asesorias" element={<Asesorias/>} />
         <Route path="/nosotros" element={<AboutUs/>} />
         <Route path="/tienda" element={<Store/>} />
         <Route path="/perfil" element={<></>} />
