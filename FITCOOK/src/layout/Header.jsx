@@ -46,7 +46,9 @@ export default function Header() {
             <div className='links'>
                 <div className="right">
                     <Link to="/rutinas">Rutinas</Link>
+                    <Link to="/ejercicios">Ejercicios</Link>
                     <Link to="/recetas">Recetas</Link>
+                    <Link to="/chat">Chat</Link>
                     <Link to="/asesorias">Asesorias</Link>
                     <Link to="/nosotros">Sobre Nosotros</Link>
                     <Link to="/tienda">Tienda</Link>

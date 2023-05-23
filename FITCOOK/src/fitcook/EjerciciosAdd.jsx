@@ -197,26 +197,16 @@ const EjerciciosAdd = ({ setAfegir }) => {
   </span>
 
   <div className="flex justify-center">
-  <div className="mb-3 w-96">
-    <label htmlFor="miniature" className="form-label inline-block mb-2 text-gray-600">Imatge PNG, JPG or GIF (MAX. 800x400px)</label>
-    <input name="miniature" 
-    onChange={ handleChange}
-    className="form-control
-    block
-    w-full
-    px-3
-    py-1.5
-    text-base
-    font-normal
-    text-gray-700
-    bg-white bg-clip-padding
-    border border-solid border-gray-300
-    rounded
-    transition
-    ease-in-out
-    m-0
-    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file" id="miniature"/>
-  </div>
+  <span className="flex flex-col gap-y-2">
+          <label className="text-gray-600" htmlFor="miniature">URL Foto</label>
+          <input
+            type="text"
+            name="miniature"
+            value={formulari.miniature}
+            onChange={ handleChange}
+            className="w-1/3 px-4 py-2 border border-gray-300 outline-none focus:border-gray-400"
+          />
+  </span>
 </div>
 
 
