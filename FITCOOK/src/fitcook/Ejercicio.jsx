@@ -55,6 +55,10 @@ return (
           <p>{v.description}</p>
           <p>{v.level}</p>
           <p>{v.duration}</p>
+          <video width="640" height="360" controls>
+            <source src={v.video_url}  type="video/mp4"/>
+            Tu navegador no soporta la reproducción de videos.
+          </video>
           <p>{v.video_url}</p>
           <p>{v.muscle_groups}</p>
           <Link to={"/ejercicios/edit/"+v.id} className="w-max text-cyan-600"> Editar </Link>

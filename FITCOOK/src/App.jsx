@@ -9,9 +9,11 @@ import Asesorias from "./fitcook/Asesorias"
 import Recetas from "./fitcook/Recetas"
 import Rutinas from "./fitcook/Rutinas"
 import RutinasAdd from "./fitcook/RutinasAdd"
+import RutinasList from "./fitcook/RutinaList"
+import RutinaEdit from "./fitcook/RutinasEdit"
 import Ejercicios from "./fitcook/Ejercicios"
 import EjerciciosAdd from "./fitcook/EjerciciosAdd" 
-import EjerciciosEdit from "./fitcook/EjerciciosEdit" 
+import EjerciciosEdit from "./fitcook/EjerciciosEdit"
 import Chat from "./fitcook/Chat" 
 import Home from "./fitcook/Home"
 import Store from "./Tienda/Tienda"
@@ -28,6 +30,8 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/rutinas" element={<Rutinas/>} />
         <Route path="/rutinas/add" element={<RutinasAdd/> } />
+        <Route path="/rutinas/show/:id" element={<RutinasList/>} />
+        <Route path="/rutinas/edit/:id" element={<RutinaEdit/>} />
         <Route path="/ejercicios" element={<Ejercicios/>} />
         <Route path="/ejercicios/add" element={<EjerciciosAdd/> } />
         <Route path="/ejercicios/edit/:id" element={<EjerciciosEdit/>} />
